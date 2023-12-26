@@ -27,7 +27,7 @@ function Orders() {
       <div className="infoPage">
          <div className="d-flex align-center favorites-top">
             <Link to="/">
-               <img className="cu-p" src="./img/arrow-left.svg" alt="Arrow Left" />
+               <img className="cu-p" src="img/arrow-left.svg" alt="Arrow Left" />
             </Link>
             <h1 className="content__title">Мои покупки</h1>
          </div>

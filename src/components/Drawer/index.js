@@ -44,7 +44,7 @@ function Drawer({ items, onClickClose, onDeleteCart, opened }) {
             <h2 className="drawer__title mb-30  d-flex align-center justify-between">
                Корзина
                <div className="btn-remove" onClick={onClickClose}>
-                  <img src="./img/btn-close.svg" alt="Close" />
+                  <img src="img/btn-close.svg" alt="Close" />
                </div>
             </h2>
 
@@ -59,7 +59,7 @@ function Drawer({ items, onClickClose, onDeleteCart, opened }) {
                               <div className="d-flex align-center justify-between">
                                  <b>{obj.price} руб.</b>
                                  <div className="btn-remove" onClick={() => onDeleteCart(obj.id)}>
-                                    <img src="./img/btn-close.svg" alt="Close" />
+                                    <img src="img/btn-close.svg" alt="Close" />
                                  </div>
                               </div>
                            </div>
@@ -81,13 +81,13 @@ function Drawer({ items, onClickClose, onDeleteCart, opened }) {
                      </ul>
 
                      <button disabled={isLoading} onClick={onClickOrder} className="greenButton">
-                        Оформить заказ <img src="./img/arrow-right.svg" alt="Arrow-right" />
+                        Оформить заказ <img src="img/arrow-right.svg" alt="Arrow-right" />
                      </button>
                   </div>
                </div>
             ) : (
                <Info
-                  img={isOrderComplete ? "./img/complete-order.jpg" : "./img/empty-cart.jpg"}
+                  img={isOrderComplete ? "img/complete-order.jpg" : "img/empty-cart.jpg"}
                   title={isOrderComplete ? "Заказ оформлен!" : "Корзина пустая"}
                   descr={
                      isOrderComplete

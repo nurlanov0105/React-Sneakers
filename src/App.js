@@ -155,7 +155,7 @@ function App() {
             <main>
                <Routes>
                   <Route
-                     path="/"
+                     path=""
                      exact
                      element={
                         <Home
@@ -171,11 +171,11 @@ function App() {
                         />
                      }></Route>
                   <Route
-                     path="/favorites"
+                     path="favorites"
                      element={
                         <Favorites onAddToFavortie={onAddToFavortie} onAddToCart={onAddToCart} />
                      }></Route>
-                  <Route path="/Orders" element={<Orders />}></Route>
+                  <Route path="Orders" element={<Orders />}></Route>
                </Routes>
             </main>
          </div>
