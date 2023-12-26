@@ -1,0 +1,279 @@
+body {
+   background-color: #e7f6ff;
+}
+
+* {
+   font-family: "Inter", sytem-ui;
+}
+
+.wrapper {
+   max-width: 1080px;
+   margin: 0 auto;
+
+   border-radius: 20px;
+   background: #fff;
+   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.04);
+}
+
+.header {
+   border-bottom: 1px solid #eaeaea;
+   &__left {
+      column-gap: 16px;
+
+      h3 {
+         font-size: 20px;
+         font-weight: 700;
+      }
+      p {
+         color: #9d9d9d;
+         font-size: 14px;
+         font-weight: 400;
+      }
+   }
+
+   &__info {
+      h3,
+      p {
+         margin: 0;
+      }
+   }
+
+   &__list {
+      column-gap: 32px;
+
+      li {
+         display: flex;
+         column-gap: 8px;
+
+         span {
+            color: #5c5c5c;
+            font-size: 14px;
+            font-weight: 400;
+         }
+         cursor: pointer;
+      }
+   }
+}
+
+.semib {
+   font-weight: 600 !important;
+}
+.content {
+   &__title {
+      margin: 0;
+   }
+}
+
+.sneakers {
+   column-gap: 40px;
+   row-gap: 50px;
+}
+
+.search-block {
+   width: 250px;
+   height: 45px;
+   padding: 0 15px;
+
+   border-radius: 10px;
+   border: 1px solid #f3f3f3;
+   overflow: hidden;
+
+   position: relative;
+
+   input {
+      width: 200px;
+      border: 0;
+      padding: 13px;
+      font-size: 16px;
+   }
+
+   .clear {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+
+      width: 25px;
+   }
+}
+
+.items {
+   overflow: auto;
+   max-height: 485px;
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+
+   & > * {
+      flex-shrink: 0;
+   }
+}
+
+.cartEmpty {
+   text-align: center;
+
+   p {
+      width: 280px;
+      line-height: 24px;
+   }
+
+   .greenButton {
+      width: 245px;
+      margin-top: 20px;
+
+      &:hover {
+         img {
+            transform: rotate(180deg) translateX(3px);
+         }
+      }
+
+      img {
+         position: relative;
+         top: 1px;
+         transform: rotate(180deg);
+         margin-right: 15px;
+         transition: transform 0.15s ease-in-out;
+      }
+   }
+}
+
+.cart-item {
+   padding: 20px;
+   column-gap: 21px;
+
+   border-radius: 20px;
+   border: 1px solid #f3f3f3;
+   background: #fff;
+
+   overflow: hidden;
+
+   img {
+      width: 70px;
+      height: 70px;
+   }
+
+   p {
+      font-size: 16px;
+      margin: 0 0 2px 0;
+   }
+
+   b {
+      font-size: 14px;
+   }
+}
+
+.btn-remove {
+   width: 32px;
+   height: 32px;
+   opacity: 0.5;
+   img {
+      width: 32px;
+      height: 32px;
+   }
+
+   cursor: pointer;
+   transition: opacity 0.15s ease-in-out;
+
+   &:hover {
+      opacity: 1;
+   }
+}
+
+.cartTotalBlock {
+   margin-top: auto !important;
+
+   ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      margin-bottom: 24px !important;
+
+      li {
+         display: flex;
+
+         div {
+            display: block;
+            width: 100%;
+            margin: 0 8px 4px 8px;
+            border-bottom: 1px dashed #dfdfdf;
+         }
+
+         span {
+            flex-shrink: 0;
+         }
+         b {
+            flex-shrink: 0;
+         }
+      }
+   }
+
+   .greenButton {
+      position: relative;
+      img {
+         position: absolute;
+         top: 50%;
+         right: 33px;
+         transform: translateY(-50%);
+
+         width: 14px;
+         height: 12px;
+
+         transition: transform 0.15s ease-in-out;
+      }
+
+      &:hover {
+         img {
+            transform: translateY(-50%) translateX(5px);
+         }
+      }
+
+      &:disabled {
+         animation: btn-loading 0.8s ease-in-out infinite;
+      }
+   }
+}
+.greenButton {
+   width: 100%;
+   height: 55px;
+   border-radius: 18px;
+   background: #9dd458;
+   border: 0;
+
+   cursor: pointer;
+
+   color: #fff;
+   font-size: 16px;
+   font-weight: 600;
+
+   transition: background-color 0.15s ease-in-out;
+
+   &:hover {
+      background-color: #8ec051;
+   }
+
+   &:disabled {
+      background-color: #bebebe;
+      cursor: default !important;
+   }
+}
+
+.favorites-top {
+   padding: 0px 40px 40px;
+   column-gap: 20px;
+}
+
+@keyframes btn-loading {
+   0% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0.7;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+.infoPage {
+   padding: 40px !important;
+}
